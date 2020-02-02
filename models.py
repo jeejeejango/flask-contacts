@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Sequence, create_engine
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'oracle://oradmin:password1@oracle12c.localdomain/?service_name=pdb1'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'oracle://@oracle12c.localdomain/?service_name=pdb1'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app=app, engine_options={'max_identifier_length': 30})
 
